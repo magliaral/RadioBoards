@@ -52,7 +52,10 @@
 
   #elif defined(ARDUINO_RAKWIRELESS_RAK11300)
     #define RADIO_BOARD_RAKWIRELESS_RAK11300
-  
+
+  #elif defined(ARDUINO_T_CONNECT_PRO)
+    #define RADIO_BOARD_LILYGO_T_CONNECT_PRO
+
   #else
     #error "Unable to resolve board type automatically, please select one from the supported list"
 
@@ -130,6 +133,9 @@
 
 #elif defined(RADIO_BOARD_XIAO_ESP32C3)
   #include "contributed/SeeedStudio/XIAO_ESP32C3.h"
+
+#elif defined(RADIO_BOARD_LILYGO_T_CONNECT_PRO)
+  #include "contributed/LilyGo/LilyGo_T_Connect_Pro.h"
 
 #else
   #error "Unsupported or unknown radio board!"
